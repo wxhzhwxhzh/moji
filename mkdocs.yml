@@ -66,3 +66,7 @@ markdown_extensions:
 # 把原站 build.mjs 里「扫目录生成列表」的那一步补回来
 hooks:
   - hooks/lists.py
+
+site_url: https://wxhzhwxhzh.github.io/moji/
+
+
