@@ -1,0 +1,68 @@
+# 墨记文档 · MkDocs 版
+#
+# 原站（E:\123\craft\app）是一个手写的静态生成器：build.mjs 读 content/*.md，
+# 套上固定外壳，输出 dist/*.html。这里改用 MkDocs + Material 主题，
+# 保留内容与目录结构，地址改为 MkDocs 默认的目录式（/docs/getting-started/）。
+
+site_name: 墨记文档
+site_description: 一份个人文档与技术博客：软件手册、技术博客和零散记录。
+site_author: 墨记文档
+
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: zh
+  logo: assets/brand.svg
+  favicon: favicon.svg
+  palette:
+    # 原站是纯白底 + 一层很浅的灰填充，主色用 white 才接近；
+    # 链接色沿用原站的 #3964fe（Material 的 indigo 最接近）。
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.top
+    - navigation.tracking
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+
+# 与原站一致：侧栏是一个扁平的五项目录，不是多级树。
+# 手册正文和博客正文不在 nav 里，靠列表页进入（构建时会打 INFO 提示，不影响产物）。
+nav:
+  - 使用引导: index.md
+  - 软件手册: docs/index.md
+  - 技术博客: blog/index.md
+  - 更新日志: changelog.md
+  - 关于本站: about.md
+
+markdown_extensions:
+  - meta            # 顶部 --- 之间的登记信息
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - admonition      # 折叠块（首页问答用 pymdownx.details）
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - tables
+  - attr_list
+  - sane_lists
+
+# 把原站 build.mjs 里「扫目录生成列表」的那一步补回来
+hooks:
+  - hooks/lists.py

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 576" width="1024" height="576" role="img" aria-label="缠绕的线条被理成整齐的网格">
+  <rect width="1024" height="576" fill="#ffffff"/>
+
+  <!-- tangled lines on the left -->
+  <g fill="none" stroke="#2631481a" stroke-width="4" stroke-linecap="round">
+    <path d="M60 300c40-120 96 90 140-40s84 120 128-30"/>
+    <path d="M74 350c52-150 78 90 132-60s92 130 130-40"/>
+    <path d="M64 244c60 110 90-90 140 40s70-110 122 10"/>
+  </g>
+  <circle cx="330" cy="300" r="10" fill="#3964fe"/>
+
+  <!-- arrow -->
+  <path d="M366 300h78" stroke="#0f1115" stroke-width="4" stroke-linecap="round"/>
+  <path d="M444 286l22 14-22 14" fill="none" stroke="#0f1115" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- tidy grid on the right -->
+  <g stroke="#3964fe" stroke-width="4" stroke-linecap="round">
+    <path d="M512 190h360"/>
+    <path d="M512 268h300"/>
+    <path d="M512 346h330"/>
+    <path d="M512 424h250"/>
+  </g>
+  <g stroke="#c9d4ff" stroke-width="3" stroke-linecap="round">
+    <path d="M560 190v234"/>
+    <path d="M700 190v234"/>
+    <path d="M840 190v234"/>
+  </g>
+  <g fill="#eef2ff" stroke="#c9d4ff" stroke-width="2">
+    <rect x="512" y="164" width="360" height="52" rx="12"/>
+    <rect x="512" y="242" width="300" height="52" rx="12"/>
+    <rect x="512" y="320" width="330" height="52" rx="12"/>
+    <rect x="512" y="398" width="250" height="52" rx="12"/>
+  </g>
+</svg>

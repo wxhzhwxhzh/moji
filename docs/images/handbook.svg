@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 576" width="1024" height="576" role="img" aria-label="书桌上摊开的文档、铅笔和一杯咖啡">
+  <rect width="1024" height="576" fill="#ffffff"/>
+  <rect x="120" y="470" width="784" height="4" rx="2" fill="#2631481a"/>
+
+  <!-- document -->
+  <rect x="330" y="96" width="360" height="380" rx="18" fill="#ffffff" stroke="#0f1115" stroke-width="3"/>
+  <rect x="366" y="140" width="150" height="14" rx="7" fill="#3964fe"/>
+  <rect x="366" y="184" width="248" height="10" rx="5" fill="#2631481a"/>
+  <rect x="366" y="212" width="288" height="10" rx="5" fill="#2631481a"/>
+  <rect x="366" y="240" width="210" height="10" rx="5" fill="#2631481a"/>
+  <rect x="366" y="286" width="288" height="150" rx="12" fill="#eef2ff" stroke="#c9d4ff" stroke-width="2"/>
+  <path d="M388 414 424 366 450 398 474 376 512 414Z" fill="#c9d4ff"/>
+  <circle cx="470" cy="322" r="13" fill="#c9d4ff"/>
+
+  <!-- pencil -->
+  <g transform="rotate(22 742 300)">
+    <rect x="726" y="150" width="30" height="260" rx="6" fill="#3964fe"/>
+    <rect x="726" y="150" width="30" height="42" rx="6" fill="#b9c8ff"/>
+    <path d="M726 410h30l-15 44Z" fill="#0f1115"/>
+  </g>
+
+  <!-- cup -->
+  <path d="M168 356h96v70a26 26 0 0 1-26 26h-44a26 26 0 0 1-26-26Z" fill="#eef2ff" stroke="#0f1115" stroke-width="3"/>
+  <path d="M264 374h20a20 20 0 0 1 0 40h-20" fill="none" stroke="#0f1115" stroke-width="3"/>
+  <rect x="156" y="332" width="120" height="12" rx="6" fill="#0f1115"/>
+
+  <!-- sticky note -->
+  <g transform="rotate(-7 850 140)">
+    <rect x="756" y="66" width="176" height="150" rx="12" fill="#b9c8ff"/>
+    <rect x="782" y="100" width="120" height="9" rx="4.5" fill="#ffffff"/>
+    <rect x="782" y="126" width="96" height="9" rx="4.5" fill="#ffffff"/>
+    <rect x="782" y="152" width="110" height="9" rx="4.5" fill="#ffffff"/>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 576" width="1024" height="576" role="img" aria-label="几层页面草图叠在一起，被一条线串起来">
+  <rect width="1024" height="576" fill="#ffffff"/>
+
+  <!-- back page -->
+  <g transform="translate(268 92)">
+    <rect width="300" height="220" rx="16" fill="#eef2ff" stroke="#c9d4ff" stroke-width="2"/>
+    <rect x="24" y="26" width="96" height="12" rx="6" fill="#c9d4ff"/>
+    <rect x="24" y="60" width="240" height="9" rx="4.5" fill="#c9d4ff"/>
+    <rect x="24" y="84" width="200" height="9" rx="4.5" fill="#c9d4ff"/>
+    <rect x="24" y="108" width="228" height="9" rx="4.5" fill="#c9d4ff"/>
+    <rect x="24" y="150" width="252" height="48" rx="10" fill="#ffffff" stroke="#c9d4ff" stroke-width="2"/>
+  </g>
+
+  <!-- middle page -->
+  <g transform="translate(378 158)">
+    <rect width="300" height="220" rx="16" fill="#ffffff" stroke="#b9c8ff" stroke-width="2"/>
+    <rect x="24" y="26" width="96" height="12" rx="6" fill="#b9c8ff"/>
+    <rect x="24" y="60" width="240" height="9" rx="4.5" fill="#b9c8ff"/>
+    <rect x="24" y="84" width="200" height="9" rx="4.5" fill="#b9c8ff"/>
+    <rect x="24" y="108" width="228" height="9" rx="4.5" fill="#b9c8ff"/>
+    <rect x="24" y="150" width="252" height="48" rx="10" fill="#eef2ff" stroke="#b9c8ff" stroke-width="2"/>
+  </g>
+
+  <!-- front page -->
+  <g transform="translate(488 224)">
+    <rect width="300" height="220" rx="16" fill="#ffffff" stroke="#0f1115" stroke-width="3"/>
+    <rect x="24" y="26" width="96" height="12" rx="6" fill="#3964fe"/>
+    <rect x="24" y="60" width="240" height="9" rx="4.5" fill="#2631481a"/>
+    <rect x="24" y="84" width="200" height="9" rx="4.5" fill="#2631481a"/>
+    <rect x="24" y="108" width="228" height="9" rx="4.5" fill="#2631481a"/>
+    <rect x="24" y="150" width="252" height="48" rx="10" fill="#eef2ff" stroke="#c9d4ff" stroke-width="2"/>
+    <path d="M40 198 64 174 82 192 98 178 122 198Z" fill="#c9d4ff"/>
+  </g>
+
+  <!-- connecting line -->
+  <path d="M180 470h680" stroke="#3964fe" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="120" cy="470" r="10" fill="#3964fe"/>
+  <circle cx="880" cy="470" r="10" fill="#ffffff" stroke="#3964fe" stroke-width="4"/>
+</svg>

@@ -1,0 +1,2 @@
+# MkDocs + Material 主题。装完之后 `mkdocs build` 的产物在 site/。
+mkdocs-material==9.8.0

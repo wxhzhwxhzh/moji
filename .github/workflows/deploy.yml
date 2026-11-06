@@ -1,0 +1,71 @@
+# 每次 push 到 main / master 就构建一次 site/，并发布到 GitHub Pages。
+# 手动触发：仓库的 Actions 页面 → 选这个工作流 → Run workflow。
+#
+# 首次使用需要在仓库里做一次设置：
+#   Settings → Pages → Build and deployment → Source 选 “GitHub Actions”
+# 之后不需要任何分支存放产物，Pages 直接用这次构建的 site/ 目录。
+
+name: 构建并发布
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  # 允许在 Actions 页面手动跑一次
+  workflow_dispatch:
+
+# 部署 Pages 需要这三项；contents: read 只够读代码
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同一时间只允许一个部署，但不要取消正在进行的那次（避免发布到一半被打断）
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: 构建与自检
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 准备 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: 安装依赖
+        run: pip install -r requirements.txt
+
+      # --strict 把 WARNING 当成错误：断链、锚点不存在、页面没有标题都会让这次构建失败，
+      # 而不是悄悄发一个坏站点出去。
+      - name: 构建站点
+        run: mkdocs build --strict
+
+      # 除了 MkDocs 自己的检查，再把产物里每条站内链接和图片过一遍
+      - name: 校验站内链接
+        run: python tools/check_links.py
+
+      - name: 上传构建产物
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    name: 发布到 GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: 部署
+        id: deployment
+        uses: actions/deploy-pages@v4
